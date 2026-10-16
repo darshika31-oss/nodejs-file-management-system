@@ -1,0 +1,134 @@
+/* Basic page styling */
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 30px;
+    margin: 10px;
+    position: relative;
+    text-align: center;
+}
+
+
+
+/* Main heading */
+h1 {
+    text-align: center;
+}
+
+/* Box for each section */
+.box {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Input and textarea */
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+/* Textarea height */
+textarea {
+    height: 120px;
+}
+
+/* Button */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+/* File list */
+li {
+    margin: 10px 0;
+}
+
+/* Notification/Toast Styles */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    min-width: 250px;
+    max-width: 350px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-out forwards;
+}
+
+.toast.success {
+    background-color: #28a745;
+}
+
+.toast.error {
+    background-color: #dc3545;
+}
+
+.toast-info {
+    background-color: #17a2b8;
+}
+
+.toast-icon {
+    font-size: 1.2rem;
+}
+
+.toast-message {
+    flex: 1;
+}
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Style for empty state */
+.empty-state {
+    text-align: center;
+    padding: 40px 20px;
+    color: #666;
+    font-style: italic;
+}
